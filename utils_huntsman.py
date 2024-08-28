@@ -1,4 +1,4 @@
-''' ITERATION 4
+''' ITERATION 5
 
 Module: Huntsman Analytics - Reusable Module for My Data Analytics Projects
 
@@ -8,33 +8,22 @@ Module: Huntsman Analytics - Reusable Module for My Data Analytics Projects
 # Import Modules at the Top
 #####################################
 
-# In Python, we can import modules to add extra tools and functions.
-# Below, we're importing:
-# - `statistics`: This gives us tools to calculate things like averages.
-# Use CTRL F and type statistics to see where it is used in the code. 
-# Did you find statistics.mean()?
-# Did you find statistics.stdev()?
-
 import statistics
 
 #####################################
 # Declare global variables 
 #####################################
 
-# Boolean variable to indicate if the company has international clients
 has_international_clients: bool = True
-
-# Integer variable for the number of years in operation
 years_in_operation: int = 10
-
-# Float variable for the average client satisfaction score
 average_client_satisfaction: float = 4.7
-
-# List of strings representing the skills offered by the company
 skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
-
-# List of floats representing individual client satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+accepting_new_clients: bool = True
+years_of_experience: int = 4
+sales_expertise: list = ["Confidence", "Customer Service", "Negotiating", "Problem-Solving"]
+daily_temps: list = [68, 58, 54, 60, 68, 67, 52]
+
 
 #####################################
 # Calculate Basic Statistics 
@@ -44,6 +33,11 @@ min_score: float = min(client_satisfaction_scores)
 max_score: float = max(client_satisfaction_scores)  
 mean_score: float = statistics.mean(client_satisfaction_scores)  
 stdev_score: float = statistics.stdev(client_satisfaction_scores)
+
+min_temps: float = min(daily_temps)
+max_temps: float = max(daily_temps)
+mean_temps: float = statistics.mean(daily_temps)
+stdev_temps: float = statistics.stdev(daily_temps)
 
 #####################################
 # Declare a global variable named byline. 
@@ -57,6 +51,18 @@ Has International Clients:  {has_international_clients}
 Years in Operation:         {years_in_operation}
 Skills Offered:             {skills_offered}
 Client Satisfaction Scores: {client_satisfaction_scores}
+Minimum Satisfaction Score: {min_score}
+Maximum Satisfaction Score: {max_score}
+Mean Satisfaction Score:    {mean_score:.2f}
+Standard Deviation:         {stdev_score:.2f}
+Accepting New Clients:      {accepting_new_clients}
+Years of Experience:        {years_of_experience}
+Sales Expertise:            {sales_expertise}
+Daily Temp Lows in Boston:  {daily_temps}
+Minimum Temp Low:           {min_temps}
+Maximum Temp Low:           {max_temps}
+Mean Temp Low:              {mean_temps:.2f}
+Standard Deviation:         {stdev_temps:.2f}
 """
 
 #####################################
